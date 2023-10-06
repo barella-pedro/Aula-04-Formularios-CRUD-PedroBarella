@@ -1,0 +1,33 @@
+<h1> {{action}} sua Lista!</h1>
+
+<form method="post">
+  {% csrf_token %}
+    
+    <div>
+    <label>Top 1</label>
+    <input name="top1" value="{{rank.top1}}">
+    </div>
+
+    <div>
+    <label>Top 2</label>
+    <input name="top2"value="{{rank.top2}}">
+    </div>
+
+    <div>
+    <label>Top 3</label>
+    <input name="top3"value="{{rank.top3}}">
+    </div>
+
+    <div>
+    <label>Nome</label>
+    <input name="nome"value="{{rank.usuario_nome}}">
+    </div>
+
+    <div>
+    <label>Time</label>
+    <input name="time" value="{{rank.time}}">
+    </div>
+  
+  <input type="submit" value="Enviar">
+</form>
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> Pedro Nogueira Barella</title>
+  {% load static %}
+  <link href="{% static 'style.css'%}" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:wght@300&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+  
+
+<body>
+  
+  <h1> GOATS: Os Melhores da História</h1>  
+
+  <h2>Quem são os <b style="font-size:30px; color:#A80A00"">MELHORES DE TODOS OS TEMPOS</b> no esporte da bola laranja?</h2>
+
+  <div class="blue-center">
+    <img src="{% static 'images/Goats_basquete.png'%}" width="800"> 
+  </div> 
+  
+  <p> Com seus 77 anos de história, a NBA (National Basketball Association), por juntar os melhores jogadores do mundo em quadra, tornou-se a maior e mais popular liga de basquetebol do planeta. Mas dentre tantas estrelas, qual será o melhor jogador de todos os tempos? Apesar de ser um difícil debate, e não existir uma única resposta certa, trago hoje aqui uma das respostas possíveis para uma das perguntas mais feitas pelos telespectadores da liga:"Quem é o GOAT?" (a sigla significa <i>Greatest Of All Time</i>; que em português é "o melhor de todos os tempos"). </p> 
+
+
+
+  <h2 style="font-size:70px"> 3. Kobe Bryant</h2>
+ 
+  <div class="players_img">
+    <img src="{% static 'images/Kobe_Fadeaway.gif'%}"width="600">
+    <img src="{% static 'images/kobevibragetty.webp'%}" width="600">
+  </div>
+
+  <p style="font-size:30px;"> Conhecido também como <i>BLACK MAMBA</i>, por sua braveza e mentalidade sem igual dentro de quadra, Kobe é considerado por muitos o melhor pontuador decisivo e jogador individual da história do esporte. Isso porque Kobe tem feitos únicos, como:</p>
+  <div class="players_records">
+    
+    <!-- <ul>
+      <li>81 pontos em apenas uma partida contra a equipe dos Raptors, em 2006.</li>
+      <li>Ocupa a quarta posição em total de pontos na história da liga.</li>
+      <li>É um dos únicos jogadores a aposentar dois números de camisa em um time da NBA.        </li>
+    </ul> -->
+    <ul>
+      <li>{{jogador_kobe.feito_historico}} </li>
+      <li>{{jogador_kobe.info_titulos}}</li>
+      <li>{{jogador_kobe.nome_jogador}} possui um total de {{jogador_kobe.pontos_totais}} pontos na carreira, sendo o {{jogador_kobe.colocacao_pts}}º maior pontuador de todos os tempos.</li>
+    </ul>
+  
+  
+  
+  
+  
+  </div>
+
+  <h2 style="font-size:70px"> 2. LeBron James</h2>
+ <div class="players_img">
+  <img src="{% static 'images/Bron_dunk.gif'%}" width="600">
+  <img src="{% static 'images/Brons_Achievements.jpeg'%}" width="600">
+ </div>
+  
+  <p style="font-size:30px;"> Conhecido no território tupiniquim como <u>"PAPAI LEBRÃO"</u>, expressão popularizada pelo narrador esportivo Rômulo Mendonça, LeBron James não é chamado de KING (rei em inglês) atoa. O jogador tem recordes praticamente insuperáveis, como: </p>
+  <div class="players_records">
+    <ul>
+      <!-- <li>4 vezes campeão da NBA, sendo o melhor jogador em todas as respectivas finais.</li>
+      <li>Ocupa a primeira posição em total de pontos na história da liga, com 38.652 pontos até o momento.</li>
+      <li>Em 20 temporadas, chegou às finais em 10 delas (mais vezes na história).</li>
+    </ul> -->
+    <ul>
+      <li>{{jogador_lebron.feito_historico}} </li>
+      <li>{{jogador_lebron.info_titulos}}</li>
+      <li>{{jogador_lebron.nome_jogador}} possui um total de {{jogador_lebron.pontos_totais}} pontos na carreira, sendo o {{jogador_lebron.colocacao_pts}}º maior pontuador de todos os tempos.</li>
+    </ul>
+  </div>
+  <h2 style="font-size:70px">1. Michael "THE GOAT" Jordan</h2>
+
+  <div class="players_img">
+    <img src="{% static 'images/Jordan_dunk.gif'%}" width="600">
+    <img src="{% static 'images/Jordan_Champ.jpg'%}" width="600">
+  </div>
+  
+  <p style="font-size:30px;"> O PELÉ do basquete, como muitos brasileiros gostam de considerar, Michael Jordan mudou o esporte para sempre com seu modo de jogar inovador, fazendo desde bandeijas acrobáticas, até arremessos que beiram o impossível. As jogadas de Jordan foram tão marcantes, que uma de suas enterradas virou a identidade visual de uma das marcas mais vendidas de calçados das últimas décadas: Air Jordan. Os principais feitos do GOAT são: </p>
+
+  <div class="players_records">
+    <!-- <ul>
+      <li> Tem as maiores médias em pontos na carreira de todos os tempos na NBA, com 30.1 pontos por jogo. </li>
+      <li> Possui 6 títulos, sendo duas vezes campeão por 3 vezes seguidas, nos quais foi o melhor jogador em todas as finais disputadas.</li>
+      <li> Foi o único jogador na história a receber o prêmio de Melhor Jogador Defensivo do Ano e Melhor Pontuador, em 1988.</li>
+    </ul> -->
+ <ul>
+      <li>{{jogador_jordan.feito_historico}} </li>
+      <li>{{jogador_jordan.info_titulos}}</li>
+      <li>{{jogador_jordan.nome_jogador}} possui um total de {{jogador_jordan.pontos_totais}} pontos na carreira, sendo o {{jogador_jordan.colocacao_pts}}º maior pontuador de todos os tempos.</li>
+    </ul>
+  
+  </div>
+
+  <h2 style="font-size:40px"> Mais estatísticas:</h2>
+  
+  <!-- <table> 
+    <tr>
+      <th>Jogador:</th>
+      <th>Pontos:</th>
+      <th>Assistências:</th>
+      <th>Rebotes:</th>
+      <th>Aproveitamento(%):</th>
+    </tr>
+    <tr>
+      <td>Kobe Bryant </td>
+      <td>25.0</td>
+      <td>4.7</td>
+      <td>5.2</td>
+      <td>44.7%</td>  
+    </tr>
+    <tr>
+      <td>LeBron James </td>
+      <td>27.2</td>
+      <td>7.3</td>
+      <td>7.5</td>
+      <td>50.5%</td>  
+    </tr>
+    <tr>
+      <td>Michael Jordan </td>
+      <td>30.1</td>
+      <td>5.3</td>
+      <td>6.2</td>
+      <td>49.7%</td>  
+    
+    </tr>
+  </table> -->
+
+  <table> 
+    <tr>
+      <th>Jogador:</th>
+      <th>Pontos:</th>
+      <th>Assistências:</th>
+      <th>Rebotes:</th>
+    </tr>
+    <tr>
+      <td>{{jogador_kobe.nome_jogador}} </td>
+      <td>{{jogador_kobe.media_pts}} </td>
+      <td>{{jogador_kobe.media_assist}} </td>
+      <td>{{jogador_kobe.media_rebs}} </td>
+    </tr>
+    <tr>
+      <td>{{jogador_lebron.nome_jogador}} </td>
+      <td>{{jogador_lebron.media_pts}} </td>
+      <td>{{jogador_lebron.media_assist}} </td>
+      <td>{{jogador_lebron.media_rebs}} </td> 
+    </tr>
+      <td>{{jogador_jordan.nome_jogador}} </td>
+      <td>{{jogador_jordan.media_pts}} </td>
+      <td>{{jogador_jordan.media_assist}} </td>
+      <td>{{jogador_jordan.media_rebs}} </td>   
+    </tr>
+  </table>
+  
+  
+  <h2 style="font-size:40px"> Curiosidade:</h3>
+  
+  <p> Em 2013, LeBron montou uma lista polemica de GOATs, que repercutiu muito no período, na qual não colocou nem Kobe, nem a si mesmo. Veja a entrevista neste link e, logo abaixo, como ficou a lista de James: <a href="https://www.youtube.com/watch?v=5GQzh1-0jx8" target="_blank" rel="noreferrer">Lista do LeBron.</a> </p>
+  
+  <!-- <div class="container">
+    <ol> 
+      <li> Michael Jordan</li>
+      <li> Julius Erving</li>
+      <li> Larry Bird</li>
+    </ol>
+  </div> -->
+
+ <div class="container">
+    <ol> 
+      <li> {{ lista_lebron.top1.first.nome_jogador }}</li>
+      <li> {{ lista_lebron.top2.first.nome_jogador }}</li>
+      <li>{{ lista_lebron.top3.first.nome_jogador }}</li>
+    </ol>
+  </div>
+  
+  <h2 style="font-size:40px"> Monte sua Lista!</h2>
+  
+  <p> Minha lista ficou assim, você montaria de forma diferente? Para saber mais sobre os jogadores desse esporte tão incrível, acesse a Basketball Reference, um dos maiores acervos de basquete da internet, no qual você encontrará todas as estatísticas necessárias para montar sua própria lista. Link: <a href="https://www.basketball-reference.com/" target="_blank" rel="noreferrer">Basketball Reference</a> </p>
+  
+  <a href="/listas_usuarios", style="font-size:40px;font-family: 'Didact Gothic', sans-serif;">Adicionar Minha Lista!</a> 
+
+<h2 style="font-size:35px;">Lista de Usuários e Suas Respostas:</h2><br>
+  <div>
+  <ul style="background:#d6f8ff;font-family: 'Didact Gothic', sans-serif;font-size:30px;width:500px;
+  margin:0 auto;color:#000000">
+    
+    {% for usr in usuarios %}  
+        <li>  
+          <strong>Nome do Usuário:</strong> {{ usr.usuario_nome }}  <br><a href="/listas_usuarios/update/{{usr.id}}">Atualizar </a> - <a href="/listas_usuarios/delete/{{usr.id}}">Deletar </a> <br>
+          <strong>Time:</strong> {{ usr.time }}<br>
+            <ol style="color:#000000;font-size:25px;line-height: 1.5;"> 
+              <li><strong>Top 1:</strong> {{ usr.top1 }}</li>
+              <li><strong>Top 2:</strong> {{ usr.top2 }}</li>
+              <li><strong>Top 3:</strong> {{ usr.top3 }}</li>
+            </ol>      
+        <br>
+        </li> 
+    {% endfor %}
+  </ul>
+</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Rowdies', cursive;
+  font-size:100px
+}
+
+h2 {
+font-family: 'Didact Gothic', sans-serif;
+font-family: 'Montserrat', sans-serif;
+}
+
+p {
+font-family: 'Montserrat', sans-serif;
+font-size:20px;
+text-align: justify;
+}
+ol{
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  font-size:50px;
+}
+.blue-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  background:#690000;
+  width:500px;
+  margin:0 auto;
+  list-style-position:inside;
+}
+.container2 {
+  background:#caebda;
+  width:500px;
+  margin:0 auto;
+  list-style-position:inside;
+}
+.players_img{
+  display: flex;
+  flex-direction: line;
+  justify-content: center;
+}
+.players_records{
+  background:#dbd9d9;
+  width:700px;
+  margin:0 auto;
+  list-style-position:inside;
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size:20px; 
+  line-height: 1.5;
+  text-align:justify;
+}
+table {
+  width:1100px;
+  height:500px;
+  margin:0 auto;
+
+}
+
+table, th, td {
+  border: 1px solid #000;
+  border-collapse:collapse;
+  text-align: center;
+  padding:3px;
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size:30px;
+}
+th{
+  background:#dbd9d9;
+}
+
+/* ul{
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  font-size:50px;
+} */
+
