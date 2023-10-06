@@ -22,5 +22,4 @@ urlpatterns = [
   path('listas_usuarios/update/<id>', views.atualize_lista),
   path('listas_usuarios/delete/<id>', views.delete_lista),
   path('admin/', admin.site.urls),
-
 ]
