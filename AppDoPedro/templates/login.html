@@ -1,0 +1,22 @@
+  <form method="post">
+    {% csrf_token %}
+
+    
+  <h1> Bem vindo ao melhor site de basquete do mundo!</h1>  
+  <br> 
+  <h2> Logue aqui: </h2>
+  <div>
+    <label>Nome de Usuário:</label>
+    <input type="text" name="username">
+  </div>
+   <div>
+    <label>Senha:</label>
+    <input type="password" name="password">
+  </div>
+
+  <input type="submit" value="Login">
+  <br>
+  <span style="color:purple"> {{error_msg}}</span>
+ <br>
+  <a href="/users">Não possui conta? Crie agora!</a> 
+  </form>

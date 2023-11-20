@@ -17,7 +17,7 @@ class Usuario(models.Model):
   top2 = models.ManyToManyField(Jogadores, related_name='top2', blank=True)
   top3 = models.ManyToManyField(Jogadores, related_name='top3', blank=True)
   
-class User(models.Model):
+class Userlist(models.Model):
   top1 = models.CharField(max_length=50)
   top2 = models.CharField(max_length=50)
   top3 = models.CharField(max_length=50)

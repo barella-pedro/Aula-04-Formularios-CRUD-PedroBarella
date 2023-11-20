@@ -21,21 +21,26 @@
 #     return redirect ("home")
 #   return render(request,"forms.html")
 from django.shortcuts import render,redirect
+from .models import Jogadores, Usuario, Userlist
+from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 
-from .models import Jogadores, Usuario, User
-
+@login_required
 def home(request):
+
   jogador = Jogadores.objects.all()
   jogador_kobe = Jogadores.objects.get(nome_jogador="Kobe Bryant")
   jogador_lebron = Jogadores.objects.get(nome_jogador="LeBron James")
   jogador_jordan = Jogadores.objects.get(nome_jogador="Michael Jordan")
   lista_lebron = Usuario.objects.get(nome_usuario="LeBron")
-  usuarios = User.objects.all()
+  usuarios = Userlist.objects.all()
   return render(request, "home.html",context = {"jogador":jogador,"jogador_kobe":jogador_kobe,"jogador_lebron":jogador_lebron,"jogador_jordan":jogador_jordan,"lista_lebron":lista_lebron,"usuarios": usuarios, })
 
+@login_required
 def crie_lista(request):
   if request.method == "POST":
-    User.objects.create(
+    Userlist.objects.create(
       top1 = request.POST["top1"],
       top2 = request.POST["top2"],
       top3 = request.POST["top3"],
@@ -44,8 +49,9 @@ def crie_lista(request):
     return redirect ("home")
   return render(request,"forms.html",context={"action":"Adicione"})
 
+@login_required
 def atualize_lista(request,id):
-  rank = User.objects.get(id=id)
+  rank = Userlist.objects.get(id=id)
   if request.method == "POST":
     rank.top1 = request.POST["top1"]
     rank.top2 = request.POST["top2"]
@@ -56,10 +62,40 @@ def atualize_lista(request,id):
     return redirect ("home")
   return render(request,"forms.html", context={"action":"Atualize","rank":rank})
 
+@login_required
 def delete_lista(request,id):
-  rank = User.objects.get(id=id)
+  rank = Userlist.objects.get(id=id)
   if request.method == "POST":
     if "confirm"in request.POST:
       rank.delete()
     return redirect ("home")
   return render(request,"are_you_sure.html", context={"rank":rank})
+
+def create_user(request):
+  if request.method == "POST":
+    user = User.objects.create_user(
+      request.POST["username"],
+      request.POST["email"], 
+      request.POST["password"]
+    )
+    user.save()
+    return redirect("home")
+  return render(request, "register.html",
+context={"action": "Adicionar"} )
+
+def login_user(request):
+  if request.method == "POST":
+    user = authenticate(username=request.POST["username"],
+    password=request.POST["password"])
+    if user != None:
+      login(request,user)
+    else:
+      return render(request, "login.html", context={"error_msg": "Atenção! Este usuário não existe no site."})
+    if request.user.is_authenticated:
+      return redirect("home")
+    return render(request, "login.html", context={"error_msg": "Atenção! Este usuário não pode ser autenticado neste site"})
+  return render(request, "login.html")
+
+def logout_user(request):
+  logout(request)
+  return redirect("login")
